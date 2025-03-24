@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from "react";
+import React, {useState} from "react";
 // import syllabify from "syllabify-fr";
 import Circle from './components/Circle';
 import Stats from "./components/Stats.tsx";
@@ -38,7 +38,7 @@ function toSize(wordCount:number){
 const App = () => {
     const [text, setText] = useState('');
 
-    const handleTextChange = (event : any) => {
+    const handleTextChange = (event : React.ChangeEvent<HTMLTextAreaElement>) => {
       setText(event.target.value);
     };
 
